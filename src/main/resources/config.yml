@@ -1,0 +1,51 @@
+#自定义图纸 图纸名
+Drawing:
+  - "图纸"
+  - "&a&l战神图纸"
+#锻造结果
+Results:
+  图纸:
+    #锻造后给予的锻造经验
+    giveExp: 5
+    #锻造所需等级
+    needLevel: 1
+    #锻造成功率
+    rate:
+      bai: 30
+      lv: 20
+      lan: 10
+      zi: 5
+      hong: 3
+      jin: 1
+    #锻造后的物品  这里使用NeigeItems的物品插件
+    item: "ExampleItem"
+    #锻造成果后是否发送全服公告
+    broadcast: true
+    #锻造后的公告内容
+    broadcastMessage: "&a&l恭喜玩家{player}锻造出了上古神器{item}!"
+#锻造等级
+Levels:
+  1:
+    #变量 %wsforge_name%
+    name: "初级锻造师"
+    #所需经验
+    exp: 100
+    #锻造品质提升值 公式: 原始值 + 提升值 = 最终锻造值
+    quality:
+      bai: 30
+      lv: 20
+      lan: 10
+      zi: 5
+      hong: 3
+      jin: 1
+  2:
+    #所需经验
+    exp: 100
+    #锻造品质提升值 公式: 原始值 + 提升值 = 最终锻造值
+    quality:
+      bai: 30
+      lv: 40
+      lan: 30
+      zi: 20
+      hong: 10
+      jin: 5
