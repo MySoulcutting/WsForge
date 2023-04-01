@@ -4,5 +4,6 @@ main: cn.whitesoul.wsforge.WsForge
 depend:
   - WsLib
   - NeigeItems
+  - PlaceholderAPI
 commands:
   wsforge:
