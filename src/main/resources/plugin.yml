@@ -5,5 +5,6 @@ depend:
   - WsLib
   - NeigeItems
   - PlaceholderAPI
+  - XConomy
 commands:
   wsforge:

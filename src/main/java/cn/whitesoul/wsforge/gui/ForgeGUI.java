@@ -1,5 +1,6 @@
 package cn.whitesoul.wsforge.gui;
 
+import cn.whitesoul.wsforge.WsForge;
 import cn.whitesoul.wslib.item.WsItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -9,8 +10,9 @@ import org.bukkit.inventory.ItemStack;
 
 public class ForgeGUI {
     private static Inventory inventory;
+    public static String title = WsForge.INSTANCE.getConfig().getString("Title").replace("&", "§");
     public static void create(){
-        inventory = Bukkit.createInventory(null, 27, "锻造台");
+        inventory = Bukkit.createInventory(null, 27, title);
         ItemStack button = new WsItem(Material.PAPER, 1, "§f锻造","§7点击锻造");
         ItemStack glass = new WsItem(Material.STAINED_GLASS_PANE, 1, "&f");
         int[] glassSlot = new int[]{18,19,20,21,23,24,25,26};

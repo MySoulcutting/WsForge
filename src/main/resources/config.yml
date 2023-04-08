@@ -6,7 +6,9 @@ SQL:
   Database: "test?autoReconnect=true&useSSL=false&maxReconnects=10"
 #消息
 Message:
-  success: "&a&l你锻造了 %item%"
+  success: "&a&l你锻造了出了 {item} 本次获得{exp} 点锻造经验！"
+#锻造UI名字
+Title: "&e&l锻造台"
 #锻造等级
 Levels:
   1:
@@ -24,6 +26,8 @@ Levels:
       jin: 1
   2:
     #所需经验
+    #变量 %wsforge_name%
+    name: "中级锻造师"
     exp: 100
     #锻造品质提升值 公式: 原始值 + 提升值 = 最终锻造值
     quality:

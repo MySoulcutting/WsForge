@@ -2,7 +2,6 @@ package cn.whitesoul.wsforge.command;
 
 import cn.whitesoul.wsforge.WsForge;
 import cn.whitesoul.wsforge.gui.ForgeGUI;
-import cn.whitesoul.wslib.Main;
 import cn.whitesoul.wslib.message.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -26,7 +25,7 @@ public class MainCommand implements CommandExecutor {
                 Message.sendMessage(player, "&a&l你打开了锻造台");
             }
         if (player.hasPermission("wsforge.admin") && args.length == 1 && args[0].equalsIgnoreCase("reload")) {
-            WsForge.instance.reloadConfig();
+            WsForge.INSTANCE.reloadConfig();
             WsForge.forge.reload();
             Message.sendMessage(player, "&a&l你重载了配置文件");
         }

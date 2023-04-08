@@ -1,12 +1,8 @@
 package cn.whitesoul.wsforge.util;
 
-import cn.whitesoul.wsforge.data.Map;
-import me.clip.placeholderapi.PlaceholderAPI;
+import cn.whitesoul.wsforge.data.Cache;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
-import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
-
-import javax.annotation.Nullable;
 
 public class HookPapi extends PlaceholderExpansion {
 
@@ -31,13 +27,13 @@ public class HookPapi extends PlaceholderExpansion {
             return "null";
         }
         if(params.equalsIgnoreCase("name")) {
-            return Map.names.get(player.getUniqueId());
+            return Cache.names.get(player.getUniqueId());
         }
         if(params.equalsIgnoreCase("level")) {
-            return String.valueOf(Map.level.get(player.getUniqueId()));
+            return String.valueOf(Cache.level.get(player.getUniqueId()));
         }
         if(params.equalsIgnoreCase("exp")) {
-            return String.valueOf(Map.exp.get(player.getUniqueId()));
+            return String.valueOf(Cache.exp.get(player.getUniqueId()));
         }
         return null;
     }
